@@ -17,7 +17,9 @@ window.addEventListener("load", () => {
 
     // reset validation text when one of the password fields is changed
     function resetValidText() {
-        validText.style.display = "none";
+        // only reset if its showing
+        if (validText.style.display == "block")
+            validText.style.display = "none";
     }
     pass1.addEventListener("input", resetValidText);
     pass2.addEventListener("input", resetValidText);

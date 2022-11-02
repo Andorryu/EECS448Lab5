@@ -26,12 +26,12 @@ const navItems = [
 // modifiable
 // modify in respective html file
 let hrefPrefixes = {
-    "Home": "/",
-    "Exercise 1": "/",
-    "Exercise 2": "/",
-    "Exercise 2": "/",
-    "Exercise 3": "/",
-    "Exercise 4": "/"
+    "Home": "./",
+    "Exercise 1": "./",
+    "Exercise 2": "./",
+    "Exercise 2": "./",
+    "Exercise 3": "./",
+    "Exercise 4": "./"
 };
 
 window.addEventListener("load", () => {
