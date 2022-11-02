@@ -25,13 +25,14 @@ const navItems = [
 
 // modifiable
 // modify in respective html file
+// these are the defaults for any html file within an "Exercise#" folder
+// since most html files are in those folders
 let hrefPrefixes = {
-    "Home": "./",
-    "Exercise 1": "./",
-    "Exercise 2": "./",
-    "Exercise 2": "./",
-    "Exercise 3": "./",
-    "Exercise 4": "./"
+    "Home": "../",
+    "Exercise 1": "../Exercise1",
+    "Exercise 2": "../Exercise2",
+    "Exercise 3": "../Exercise3",
+    "Exercise 4": "../Exercise4",
 };
 
 window.addEventListener("load", () => {
