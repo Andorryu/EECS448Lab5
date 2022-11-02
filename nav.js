@@ -15,5 +15,5 @@ let hrefPrefixes = {
 
 window.addEventListener("load", () => {
     let nav = document.querySelector("nav");
-    let hrefPrefix = nav.getAttribute("");
+    
 });
