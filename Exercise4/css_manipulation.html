@@ -3,8 +3,43 @@
     <head>
         <script src="../nav.js"></script>
         <link rel="StyleSheet" href="../style.css">
+        <style>
+            p#changeable {
+                border-style: solid;
+            }
+            input {
+                width: 30px;
+            }
+        </style>
     </head>
     <body>
         <nav></nav>
+        <header>
+            <h1>Exercise 4: CSS Manipulation</h1>
+        </header>
+        <p id="changeable">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer turpis nisi, dignissim viverra pulvinar
+            ut, facilisis sed turpis. Quisque et egestas magna. Vestibulum dignissim sed ligula at elementum. Donec
+            ornare lacus turpis, non cursus velit tincidunt et. Donec quis lorem varius, sodales est nec, venenatis
+            lorem. Praesent sed finibus augue. Aliquam pellentesque vel ante porttitor maximus. Maecenas lacinia ante
+            massa, non dignissim tellus lobortis quis. Donec cursus ornare enim sit amet consectetur. Pellentesque
+            posuere interdum nulla, id condimentum tortor ornare sit amet. Donec elementum sit amet erat at tristique.
+            Etiam varius leo elit, eu auctor lacus faucibus non. Duis porta nunc lacinia nisi vulputate finibus.
+        </p>
+        <p>Change the following properties of the above paragraph:</p>
+        <p>
+            border: 
+            r=<input type="text" id="border-r">, 
+            g=<input type="text" id="border-g">, 
+            b=<input type="text" id="border-b">, 
+            width=<input type="text" id="border-w">
+        </p>
+        <p>
+            background color: 
+            r=<input type="text" id="bg-r">, 
+            g=<input type="text" id="bg-r">, 
+            b=<input type="text" id="bg-r">
+        </p>
+        <button>Submit Colors</button>
     </body>
 </html>
