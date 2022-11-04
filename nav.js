@@ -11,15 +11,15 @@ const navItems = [
     },
     {
         title: "Exercise 2",
-        href: "password_validator.html"
+        href: "slide_show.html"
     },
     {
         title: "Exercise 3",
-        href: "password_validator.html"
+        href: "profile.html"
     },
     {
         title: "Exercise 4",
-        href: "password_validator.html"
+        href: "css_manipulation.html"
     }
 ];
 
@@ -29,10 +29,10 @@ const navItems = [
 // since most html files are in those folders
 let hrefPrefixes = {
     "Home": "../",
-    "Exercise 1": "../Exercise1",
-    "Exercise 2": "../Exercise2",
-    "Exercise 3": "../Exercise3",
-    "Exercise 4": "../Exercise4",
+    "Exercise 1": "../Exercise1/",
+    "Exercise 2": "../Exercise2/",
+    "Exercise 3": "../Exercise3/",
+    "Exercise 4": "../Exercise4/",
 };
 
 window.addEventListener("load", () => {
