@@ -28,11 +28,14 @@ nav a:hover {
     slideshow
 */
 #slideshow {
-    background-color:blanchedalmond;
-    width: 40%;
+    background-color:lightgray;
+    width: auto;
     margin: 0 auto;
     text-align: center;
 }
 #slideshow * {
     display: inline-block;
+}
+img {
+    width: 300px;
 }
