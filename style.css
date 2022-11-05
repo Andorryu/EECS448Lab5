@@ -1,7 +1,16 @@
+
+/*
+    header
+*/
+header {
+    text-align: center;
+    padding: 100px 0;
+}
+
+
 /*
     nav
 */
-
 nav {
     background-color: black;
     padding-top: 10px;
