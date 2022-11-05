@@ -15,11 +15,11 @@ div.section {
     font-family: arial;
     font-size: 11pt;
 }
-#links a {
+.section a {
     text-decoration: none;
     color: yellow;
     margin: 20px;
 }
-#links a:hover {
+.section a:hover {
     color: cyan;
 }
