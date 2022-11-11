@@ -40,6 +40,6 @@ for ($i = 0; $i < 5; $i++) {
 // write questions back
 for ($i = 0; $i < 5; $i++) {
     $j = $i+1;
-    echo "Question $j: " . $qs[$i]."<br>";
+    echo "Question $j: $qs[$i]<br>";
 }
 ?>
