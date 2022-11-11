@@ -7,8 +7,7 @@ $qv = array();
 $qs[0] = "Which color is the best?";
 $qs[1] = "How many fingers am I holding up?";
 $qs[2] = "Who is your favorite student?";
-$qs[3] = '<p>
-            <math display="inline">
+$qs[3] = '  <math display="inline">
                 <mrow>
                     <munderover>
                         <mo>∑</mo>
@@ -30,8 +29,7 @@ $qs[3] = '<p>
                         </msup>
                     </mfrac>
                 </mrow>
-            </math>
-          </p>';
+            </math>';
 $qs[4] = "Did you enjoy this quiz?";
 
 // question values
@@ -42,6 +40,6 @@ for ($i = 0; $i < 5; $i++) {
 // write questions back
 for ($i = 0; $i < 5; $i++) {
     $j = $i+1;
-    echo "Question $j: " . $qs[$i];
+    echo "Question $j: " . $qs[$i]."<br>";
 }
 ?>
