@@ -32,24 +32,24 @@
             <form action="quiz.php" method="POST">
                 <br><br>
                 <p>1. Which color is the best?</p>
-                <p><input type="radio" name="fav_color" value="blue">blue</p>
-                <p><input type="radio" name="fav_color" value="green">green</p>
-                <p><input type="radio" name="fav_color" value="red">red</p>
-                <p><input type="radio" name="fav_color" value="yellow">yellow</p>
+                <p><input type="radio" name="q1" value="correct">blue</p>
+                <p><input type="radio" name="q1" value="wrong">green</p>
+                <p><input type="radio" name="q1" value="wrong">red</p>
+                <p><input type="radio" name="q1" value="wrong">yellow</p>
                 <br>
                 <p>2. How many fingers am I holding up?</p>
-                <p><input type="radio" name="num_fingers" value="one">one</p>
-                <p><input type="radio" name="num_fingers" value="four">four</p>
-                <p><input type="radio" name="num_fingers" value="two">two</p>
-                <p><input type="radio" name="num_fingers" value="three">three</p>
-                <p><input type="radio" name="num_fingers" value="eleven">eleven</p>
-                <p><input type="radio" name="num_fingers" value="unfair">This is an unfair question.</p>
+                <p><input type="radio" name="q2" value="wrong">one</p>
+                <p><input type="radio" name="q2" value="wrong">four</p>
+                <p><input type="radio" name="q2" value="wrong">two</p>
+                <p><input type="radio" name="q2" value="correct">three</p>
+                <p><input type="radio" name="q2" value="wrong">eleven</p>
+                <p><input type="radio" name="q2" value="wrong">This is an unfair question.</p>
                 <br>
                 <p>3. Who is your favorite student?</p>
-                <p><input type="radio" name="fav_student" value="andrew">Andrew</p>
-                <p><input type="radio" name="fav_student" value="billy">Billy</p>
-                <p><input type="radio" name="fav_student" value="samuel">Samuel</p>
-                <p><input type="radio" name="fav_student" value="batman">Batman</p>
+                <p><input type="radio" name="q3" value="wrong">Andrew</p>
+                <p><input type="radio" name="q3" value="wrong">Billy</p>
+                <p><input type="radio" name="q3" value="wrong">Samuel</p>
+                <p><input type="radio" name="q3" value="correct">Batman</p>
 
                 <!--Math syntax copied and pasted from https://developer.mozilla.org/en-US/docs/Web/MathML/Element/math -->
                 <br>
@@ -79,7 +79,7 @@
                         </mrow>
                     </math>
                 </p>
-                <p><input type="radio" name="math" value="pi^2/6">
+                <p><input type="radio" name="q4" value="correct">
                     <math display="inline">
                         <mfrac>
                             <msup>
@@ -90,7 +90,7 @@
                         </mfrac>
                     </math>
                 </p>
-                <p><input type="radio" name="math" value="2pi^2">
+                <p><input type="radio" name="q4" value="wrong">
                     <math display="inline">
                         <msup>2
                             <mi>π</mi>
@@ -98,7 +98,7 @@
                         </msup>
                     </math>
                 </p>
-                <p><input type="radio" name="math" value="1/pi^2">
+                <p><input type="radio" name="q4" value="wrong">
                     <math display="inline">
                         <mfrac>
                             <mn>1</mn>
@@ -109,7 +109,7 @@
                         </mfrac>
                     </math>
                 </p>
-                <p><input type="radio" name="math" value="1/pi^2">
+                <p><input type="radio" name="q4" value="wrong">
                     <math display="inline">
                         <mfrac>
                             <msup>
@@ -121,11 +121,11 @@
                     </math>
                     <!-- END CRAZY MATH STUFF -->
                 </p>
-                <p><input type="radio" name="math" value="idk">I don't know.</p>
+                <p><input type="radio" name="q4" value="wrong">I don't know.</p>
                 <br>
                 <p>5. Did you enjoy this quiz?</p>
-                <p><input type="radio" name="enjoy" value="yes">yes</p>
-                <p><input type="radio" name="enjoy" value="no" class="hover"><span class="hover" id="no-to-yes">no</span></p>
+                <p><input type="radio" name="q5" value="correct">yes</p>
+                <p><input type="radio" name="q5" value="correct" class="hover"><span class="hover" id="no-to-yes">no</span></p>
                 <br>
                 <button type="submit">Submit Quiz</button>
             </form>
