@@ -1,12 +1,11 @@
 <?php
-echo "hey!"
-/*
 
 // get answer values for each question
 $qs = array();
 for ($i = 0; $i < 5; $i++) {
     $qs[$i] = $_POST["q".($i + 1)];
 }
+/*
 for ($i = 0; $i < 5; $i++) {
     $j = $i+1;
     echo "Question " . $j . ": " .
