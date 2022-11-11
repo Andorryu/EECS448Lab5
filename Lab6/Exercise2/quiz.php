@@ -51,6 +51,6 @@ for ($i = 0; $i < 5; $i++) {
 for ($i = 0; $i < 5; $i++) {
     $j = $i+1;
     echo "Question $j: $qs[$i]<br>";
-    echo "You answered: $qa[$i][$qv[$j]]";
+    echo "You answered: $qa[$i][$qv[$i]]<br>";
 }
 ?>
