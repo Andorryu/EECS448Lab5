@@ -39,6 +39,6 @@ for ($i = 0; $i < 5; $i++) {
                 </math>
             </p>" :
     "Did you enjoy this quiz?";
-}
 */
+}
 ?>
