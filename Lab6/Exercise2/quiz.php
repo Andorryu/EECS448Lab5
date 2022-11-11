@@ -23,7 +23,7 @@ $qa[2][2] = "Samuel";
 $qa[2][3] = "Batman";
 $qa[3][0] = '<math display="inline"><mfrac><msup><mi>π</mi><mn>2</mn>
             </msup><mn>6</mn></mfrac></math>';
-$qa[3][1] = '<math display="inline"><msup>2<mi>π</mi><mn>2</mn></msup>
+$qa[3][1] = '<math display="inline"><msup><mi>π</mi><mn>2</mn></msup>
             </math>';
 $qa[3][2] = '<math display="inline"><mfrac><mn>1</mn><msup><mi>π</mi>
             <mn>2</mn></msup></mfrac></math>';
