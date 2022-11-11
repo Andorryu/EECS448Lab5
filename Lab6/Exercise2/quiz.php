@@ -5,10 +5,11 @@ $qs = array();
 for ($i = 0; $i < 5; $i++) {
     $qs[$i] = $_POST["q".($i + 1)];
 }
-/*
+
 for ($i = 0; $i < 5; $i++) {
     $j = $i+1;
-    echo "Question " . $j . ": " .
+    echo "Question " . $j . ": ";
+    /*.
     $j==1 ? "Which color is the best?" :
     $j==2 ? "How many fingers am I holding up?" :
     $j==3 ? "Who is your favorite student?" :
