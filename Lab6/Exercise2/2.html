@@ -4,11 +4,131 @@
         <script src="../../nav.js"></script>
         <link rel="stylesheet" href="../../style.css">
         <script>
+            // init
             hrefPrefixes["Lab 5 Home"] = "../../Lab5/";
             lab6Mode = true;
+
+            // change no to yes when hovering over it with mouse
+            window.addEventListener("load", () => {
+                let changeP = document.getElementById("no-to-yes");
+                let hoverElements = document.getElementsByClassName("hover");
+                for (item of hoverElements) {
+                    item.addEventListener("mouseover", () => {
+                        changeP.textContent = "yes";
+                    });
+                    /* remove this comment to allow yes to change back to no
+                    item.addEventListener("mouseleave", () => {
+                        changeP.textContent = "no";
+                    });
+                    */                    
+                }
+            })
         </script>
     </head>
     <body>
         <nav></nav>
+        <h1>Quiz Time!</h1>
+        <div id="quiz-container">
+            <form action="quiz.php" method="POST">
+                <br><br>
+                <p>1. Which color is the best?</p>
+                <p><input type="radio" name="fav_color" value="blue">blue</p>
+                <p><input type="radio" name="fav_color" value="green">green</p>
+                <p><input type="radio" name="fav_color" value="red">red</p>
+                <p><input type="radio" name="fav_color" value="yellow">yellow</p>
+                <br>
+                <p>2. How many fingers am I holding up?</p>
+                <p><input type="radio" name="num_fingers" value="one">one</p>
+                <p><input type="radio" name="num_fingers" value="four">four</p>
+                <p><input type="radio" name="num_fingers" value="two">two</p>
+                <p><input type="radio" name="num_fingers" value="three">three</p>
+                <p><input type="radio" name="num_fingers" value="eleven">eleven</p>
+                <p><input type="radio" name="num_fingers" value="unfair">This is an unfair question.</p>
+                <br>
+                <p>3. Who is your favorite student?</p>
+                <p><input type="radio" name="fav_student" value="andrew">Andrew</p>
+                <p><input type="radio" name="fav_student" value="billy">Billy</p>
+                <p><input type="radio" name="fav_student" value="samuel">Samuel</p>
+                <p><input type="radio" name="fav_student" value="batman">Batman</p>
+
+                <!--Math syntax copied and pasted from https://developer.mozilla.org/en-US/docs/Web/MathML/Element/math -->
+                <br>
+                <p>4.
+                    <!-- CRAZY MATH STUFF -->
+                    <math display="inline">
+                        <mrow>
+                            <munderover>
+                                <mo>∑</mo>
+                                <mrow>
+                                    <mi>n</mi>
+                                    <mo>=</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                                <mrow>
+                                    <mo>+</mo>
+                                    <mn>∞</mn>
+                                </mrow>
+                            </munderover>
+                            <mfrac>
+                                <mn>1</mn>
+                                <msup>
+                                    <mi>n</mi>
+                                    <mn>2</mn>
+                                </msup>
+                            </mfrac>
+                        </mrow>
+                    </math>
+                </p>
+                <p><input type="radio" name="math" value="pi^2/6">
+                    <math display="inline">
+                        <mfrac>
+                            <msup>
+                                <mi>π</mi>
+                                <mn>2</mn>
+                            </msup>
+                            <mn>6</mn>
+                        </mfrac>
+                    </math>
+                </p>
+                <p><input type="radio" name="math" value="2pi^2">
+                    <math display="inline">
+                        <msup>2
+                            <mi>π</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </math>
+                </p>
+                <p><input type="radio" name="math" value="1/pi^2">
+                    <math display="inline">
+                        <mfrac>
+                            <mn>1</mn>
+                            <msup>
+                                <mi>π</mi>
+                                <mn>2</mn>
+                            </msup>
+                        </mfrac>
+                    </math>
+                </p>
+                <p><input type="radio" name="math" value="1/pi^2">
+                    <math display="inline">
+                        <mfrac>
+                            <msup>
+                                <mi>π</mi>
+                                <mn>2</mn>
+                            </msup>
+                            <mn>3</mn>
+                        </mfrac>
+                    </math>
+                    <!-- END CRAZY MATH STUFF -->
+                </p>
+                <p><input type="radio" name="math" value="idk">I don't know.</p>
+                <br>
+                <p>5. Did you enjoy this quiz?</p>
+                <p><input type="radio" name="enjoy" value="yes">yes</p>
+                <p><input type="radio" name="enjoy" value="no" class="hover"><span class="hover" id="no-to-yes">no</span></p>
+                <br>
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </div>
     </body>
 </html>
