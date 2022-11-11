@@ -1,5 +1,5 @@
 <?php
-hey!
+echo "hey!"
 /*
 
 // get answer values for each question
