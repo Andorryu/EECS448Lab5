@@ -4,7 +4,23 @@
 $qs = array();
 $qv = array();
 $qa = array();
+$qc = array();
 for ($i = 0; $i < 5; $i++) {$qa[$i] = array();}
+
+// question statements
+$qs[0] = "Which color is the best?";
+$qs[1] = "How many fingers am I holding up?";
+$qs[2] = "Who is your favorite student?";
+$qs[3] = '<math display="inline"><mrow><munderover><mo>∑</mo><mrow>
+    <mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mo>+</mo><mn>∞</mn>
+    </mrow></munderover><mfrac><mn>1</mn><msup><mi>n</mi><mn>2</mn>
+    </msup></mfrac></mrow></math>';
+$qs[4] = "Did you enjoy this quiz?";
+
+// question values
+for ($i = 0; $i < 5; $i++) {
+    $qv[$i] = $_POST["q".($i + 1)];
+}
 
 // question answers
 $qa[0][0] = "blue";
@@ -30,27 +46,20 @@ $qa[3][2] = '<math display="inline"><mfrac><mn>1</mn><msup><mi>π</mi>
 $qa[3][3] = '<math display="inline"><mfrac><msup><mi>π</mi><mn>2</mn>
             </msup><mn>3</mn></mfrac></math>';
 $qa[4][0] = "yes";
-$qa[4][1] = "yes";
 
-// question statements
-$qs[0] = "Which color is the best?";
-$qs[1] = "How many fingers am I holding up?";
-$qs[2] = "Who is your favorite student?";
-$qs[3] = '<math display="inline"><mrow><munderover><mo>∑</mo><mrow>
-    <mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mo>+</mo><mn>∞</mn>
-    </mrow></munderover><mfrac><mn>1</mn><msup><mi>n</mi><mn>2</mn>
-    </msup></mfrac></mrow></math>';
-$qs[4] = "Did you enjoy this quiz?";
+// correct answers
+$qc[0] = "0";
+$qc[1] = "3";
+$qc[2] = "3";
+$qc[3] = "0";
+$qc[4] = "0"; // both are correct
 
-// question values
-for ($i = 0; $i < 5; $i++) {
-    $qv[$i] = $_POST["q".($i + 1)];
-}
 
 // write questions back
 for ($i = 0; $i < 5; $i++) {
     $j = $i+1;
     echo "Question $j: $qs[$i]<br>";
     echo "You answered: ".$qa[$i][$qv[$i]]."<br>";
+    echo "Correct answer: ".$qa[$i][$qc[$i]]."<br><br>";
 }
 ?>
