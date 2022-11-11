@@ -10,5 +10,16 @@
     </head>
     <body>
         <nav></nav>
+        <table>
+            <?php
+                for ($i = 0; $i < 100; $i++) {
+                    echo "<tr>";
+                    for ($i = 0; $i < 100; $i++) {
+                        echo "<td>", $i + 1, "</td>";
+                    }
+                    echo "</tr>";
+                }
+            ?>
+        </table>
     </body>
 </html>
