@@ -8,8 +8,7 @@ for ($i = 0; $i < 5; $i++) {
 
 for ($i = 0; $i < 5; $i++) {
     $j = $i+1;
-    echo "Question $j: ";
-    /*.
+    echo "Question $j: " .
     $j==1 ? "Which color is the best?" :
     $j==2 ? "How many fingers am I holding up?" :
     $j==3 ? "Who is your favorite student?" :
@@ -39,6 +38,6 @@ for ($i = 0; $i < 5; $i++) {
                 </math>
             </p>" :
     "Did you enjoy this quiz?";
-*/
+
 }
 ?>
