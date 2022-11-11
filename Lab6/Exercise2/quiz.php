@@ -7,7 +7,7 @@ $qv = array();
 $qs[0] = "Which color is the best?";
 $qs[1] = "How many fingers am I holding up?";
 $qs[2] = "Who is your favorite student?";
-$qs[3] = `<p>
+$qs[3] = '<p>
             <math display="inline">
                 <mrow>
                     <munderover>
@@ -31,7 +31,7 @@ $qs[3] = `<p>
                     </mfrac>
                 </mrow>
             </math>
-          </p>`;
+          </p>';
 $qs[4] = "Did you enjoy this quiz?";
 
 // question values
