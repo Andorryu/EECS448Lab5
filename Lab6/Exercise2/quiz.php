@@ -8,11 +8,10 @@ for ($i = 0; $i < 5; $i++) {
 
 for ($i = 0; $i < 5; $i++) {
     $j = $i+1;
-    echo "Question $j: " .
-    $j==1 ? "Which color is the best?" :
+    echo "Question $j: " . $j==1 ? "Which color is the best?" :
     $j==2 ? "How many fingers am I holding up?" :
     $j==3 ? "Who is your favorite student?" :
-    $j==4 ? "<p>
+    $j==4 ? `<p>
                 <math display="inline">
                     <mrow>
                         <munderover>
@@ -36,8 +35,7 @@ for ($i = 0; $i < 5; $i++) {
                         </mfrac>
                     </mrow>
                 </math>
-            </p>" :
+            </p>` :
     "Did you enjoy this quiz?";
-
 }
 ?>
