@@ -1,48 +1,126 @@
+/* 
+    invalid input Conditions:
+    - blank text fields (used required html attribute)
+    -- username
+    -- password
+    -- item quantities (cant be negative either --- used min html attribute)
+    -- at least one radio option should be selected
+    - username must be in the form of an email (used email input type in html)
+
+    The following website helped me a ton with form validation: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+*/
 
 window.addEventListener("load", () => {
-    let form = document.querySelector("form");
-    let usernameField = document.getElementsByName("username")[0];
-    let passwordField = document.getElementsByName("password")[0];
-    let vacuumNum = document.getElementsByName("Vacuum")[0];
-    let carNum = document.getElementsByName("Car")[0];
-    let catNum = document.getElementsByName("Cat?")[0];
-    let shippingOptions = document.getElementsByName("shipping");
+    const form = document.querySelector("form");
+    const usernameField = document.querySelector("input[name='username']");
+    const passwordField = document.querySelector("input[name='password']");
+    const vacuumNum = document.querySelector("input[name='vacuum']");;
+    const carNum = document.querySelector("input[name='car']");
+    const catNum = document.querySelector("input[name='cat?']");
+    const errors = document.querySelectorAll(".error");
+    const usernameError = errors[0];
+    const passwordError = errors[1];
+    const vacuumError = errors[2];
+    const carError = errors[3];
+    const catError = errors[4];
+    const shipping = document.getElementsByName("shipping");
+    const shippingError = errors[5];
     
-    // when user submits form
-    form.addEventListener("submit", event => {
-        //event.preventDefault();
-        /* 
-            Test if failure conditions are met.
-            Failure Conditions:
-            - blank text fields
-            -- username
-            -- password
-            -- item quantities (cant be negative either)
-            -- at least one radio option should be selected
-            - username must be in the form of an email
-        */
-
-        // check empty things
-        if (usernameField.value == "" ||
-        passwordField.value == "" ||
-        vacuumNum.value == "" ||
-        carNum.value == "" ||
-        catNum.value == "") alert("empty string");
-
-        // check email format
-        // break loop if '.' is found after '@'
-        let email = false;
-        loop:
-        for (let i = 0; i < usernameField.value.length; i++) {
-            if (usernameField.value[i] == '@') {
-                for (let j = i; j < usernameField.value.length; j++) {
-                    if (usernameField.value[j] == '.') email = true;
-                }
-            }
+    // when user changes input in username field
+    usernameField.addEventListener("input", event => {
+        if (usernameField.validity.valid) {
+            usernameError.textContent = "";
+        } else {
+            showUsernameError();
         }
-        if (!email) alert("username is not email");
-
-        // instead of checking if quantity values are negative, I just set a min of 0 in the html inputs themselves
-        // I also autochecked the first radio value so I dont have to check if theres a value for them
     });
+
+    // when user changes password
+    passwordField.addEventListener("input", event => {
+        if (passwordField.validity.valid) {
+            passwordError.textContent = "";
+        } else {
+            showPasswordError();
+        }
+    });
+
+    // when the user changes item quantity
+    listenItemError(vacuumNum, vacuumError);
+    listenItemError(carNum, carError);
+    listenItemError(catNum, catError);
+
+    // shipping option radio buttons
+    shipping[0].addEventListener("input", event => {
+        if (shipping[0].validity.valid) {
+            shippingError.textContent = "";
+        } else {
+            showShippingError();
+        }
+    });
+
+    // add event listener for the items
+    function listenItemError(item, error) {
+        item.addEventListener("input", event => {
+            if (item.validity.valid) {
+                error.textContent = "";
+            } else {
+                showItemError(item, error);
+            }
+        });
+    }
+
+    // form submission
+    form.addEventListener("submit", event => {
+        if (!usernameField.validity.valid) {
+            showUsernameError();
+            event.preventDefault();
+        }
+        if (!passwordField.validity.valid) {
+            showPasswordError();
+            event.preventDefault();
+        }
+        if (!vacuumNum.validity.valid) {
+            showItemError(vacuumNum, vacuumError);
+            event.preventDefault();
+        }
+        if (!carNum.validity.valid) {
+            showItemError(carNum, carError);
+            event.preventDefault();
+        }
+        if (!catNum.validity.valid) {
+            showItemError(catNum, catError);
+            event.preventDefault();
+        }
+        if (!shipping[0].validity.valid) {
+            showShippingError();
+            event.preventDefault();
+        }
+    });
+
+
+    // helper functions
+    function showUsernameError() {
+        if (usernameField.validity.valueMissing) {
+            usernameError.textContent = "Please enter a username";
+        } else if (usernameField.validity.typeMismatch) {
+            usernameError.textContent = "Please enter username in email format";
+        }
+    }
+    function showPasswordError() {
+        if (passwordField.validity.valueMissing) {
+            passwordError.textContent = "Please enter a password";
+        }
+    }
+    function showItemError(item, error) {
+        if (item.validity.valueMissing) {
+            error.textContent = "Please enter a quantity";
+        } else if (item.validity.rangeUnderflow) {
+            error.textContent = "Please enter a non-negative value";
+        }
+    }
+    function showShippingError() {
+        if (shipping[0].validity.valueMissing) {
+            shippingError.textContent = "Please choose a shipping option";
+        }
+    }
 });

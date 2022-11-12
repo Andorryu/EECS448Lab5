@@ -16,15 +16,20 @@
         <nav></nav>
         <h1>Web Store!</h1>
         <br>
-        <form action="customerBackend.php" method="POST">
+        <form action="customerBackend.php" method="POST" novalidate> <!-- novalidate removes default validation error message bubbles -->
             <!-- USERNAME AND PASSWORD -->
             <section>
                 <h3>Log In</h3>
-                <p>
+                <span>
                     Username (in the form of an email address, ex: name@domain.com):<br>
-                    <input type="text" name="username">
-                </p>
-                <p>Password: <br><input type="password" name="password"></p>
+                    <input type="email" name="username" placeholder="Enter Username" required autofocus>
+                </span>
+                <br>
+                <span class="error"></span>
+                <br><br>
+                <span>Password: <br><input type="password" name="password" placeholder="Enter Password" required></span>
+                <br>
+                <span class="error"></span>
                 <br>
             </section>
 
@@ -32,22 +37,35 @@
             <section>
                 <h3>Items</h3>
                 <div class="item">
-                    <p>Vacuum<br><img src="img/vacuum.jpg"><br>Quantity: <input type="number" min="0" size="1" name="Vacuum"></p>
+                    <span>Vacuum<br><img src="img/vacuum.jpg"><br>Quantity: <input type="number" min="0" name="vacuum" required></span>
+                    <br>
+                    <span class="error"></span>
+                    <br>
                 </div>
                 <div class="item">
-                    <p>Car<br><img src="img/car.jpg"><br>Quantity: <input type="number" min="0" size="1" name="Car"></p>
+                    <span>Car<br><img src="img/car.jpg"><br>Quantity: <input type="number" min="0" name="car" required></span>
+                    <br>
+                    <span class="error"></span>
+                    <br>
                 </div>
                 <div class="item">
-                    <p>Cat?<br><img src="img/cat.jpg"><br>Quantity: <input type="number" min="0" size="1" name="Cat?"></p>
+                    <span>Cat?<br><img src="img/cat.jpg"><br>Quantity: <input type="number" min="0" name="cat?" required></span>
+                    <br>
+                    <span class="error"></span>
+                    <br>
                 </div>
             </section>
 
             <!-- SHIPPING OPTIONS -->
             <section>
                 <h3>Pick a shipping option</h3>
-                <p><input type="radio" name="shipping" value="Free 7 day" checked>Free 7 day</p>
-                <p><input type="radio" name="shipping" value="$50.00 over night">$50.00 over night</p>
-                <p><input type="radio" name="shipping" value="$5.00 three night">$5.00 three night</p>
+                <span><input type="radio" name="shipping" value="Free 7 day" required>Free 7 day</span>
+                <br><br>
+                <span><input type="radio" name="shipping" value="$50.00 over night" required>$50.00 over night</span>
+                <br><br>
+                <span><input type="radio" name="shipping" value="$5.00 three night" required>$5.00 three night</span>
+                <br><br>
+                <span class="error"></span>
                 <br>
             </section>
 
