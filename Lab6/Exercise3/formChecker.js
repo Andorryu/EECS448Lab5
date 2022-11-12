@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
     
     // when user submits form
     form.addEventListener("submit", event => {
-        event.preventDefault();
+        //event.preventDefault();
         /* 
             Test if failure conditions are met.
             Failure Conditions:
