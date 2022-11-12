@@ -12,5 +12,31 @@
     </head>
     <body>
         <nav></nav>
+        <h1>Web Store!</h1>
+        <br>
+        <form action="customerBackend.php" method="POST">
+            <!-- USERNAME AND PASSWORD -->
+            <h3>Log In</h3>
+            <p>Username (in the form of an email address, ex: name@domain.com):<br>
+                <input type="text" name="username"></p>
+            <p>Password: <br><input type="password" name="password"></p>
+            <br>
+
+            <!-- ITEMS -->
+            <h3>Items</h3>
+            <p><input type="checkbox" name="Vacuum">Vacuum<br><img src="img/vacuum.jpg"></p><br>
+            <p><input type="checkbox" name="Car">Car<br><img src="img/car.jpg"></p><br>
+            <p><input type="checkbox" name="Cat?">Cat?<br><img src="img/cat.jpg"></p><br>
+
+            <!-- SHIPPING OPTIONS -->
+            <h3>Pick a shipping option</h3>
+            <p><input type="radio" name="shipping" value="Free 7 day">Free 7 day</p>
+            <p><input type="radio" name="shipping" value="$50.00 over night">$50.00 over night</p>
+            <p><input type="radio" name="shipping" value="$5.00 three night">$5.00 three night</p>
+            <br>
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit">Purchase</button>
+        </form>
     </body>
 </html>
