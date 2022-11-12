@@ -13,6 +13,8 @@ echo '
         </script>
     </head>
     <nav></nav>
+    <br>
+    <h1>Quiz Answers!</h1>
 ';
 
 // init arrays
