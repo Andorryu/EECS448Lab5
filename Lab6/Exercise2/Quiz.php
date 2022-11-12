@@ -7,6 +7,8 @@ echo '
         <script>
             // init
             hrefPrefixes["Lab 5 Home"] = "../../Lab5/";
+            navItems[3].href = "Quiz.html";
+            navItems[4].href = "cutomerFrontend.html";
             lab6Mode = true;
         </script>
     </head>
