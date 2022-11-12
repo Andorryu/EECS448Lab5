@@ -10,6 +10,7 @@ echo '
             lab6Mode = true;
         </script>
     </head>
+    <nav></nav>
 ';
 
 // init arrays
