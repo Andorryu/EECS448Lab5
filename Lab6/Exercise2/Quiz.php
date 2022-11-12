@@ -1,8 +1,6 @@
 <?php
 // set up basic html
 echo '
-<!DOCTYPE html>
-<html>
     <head>
         <script src="../../nav.js"></script>
         <link rel="stylesheet" href="../../style.css">
@@ -12,7 +10,6 @@ echo '
             lab6Mode = true;
         </script>
     </head>
-    <body>
 ';
 
 // init arrays
@@ -89,9 +86,4 @@ for ($i = 0; $i < 5; $i++) {
 // write final grade back
 echo "Your grade is $grade% ($score/5).";
 
-// write end of body
-echo '
-    </body>
-</html>
-';
 ?>
