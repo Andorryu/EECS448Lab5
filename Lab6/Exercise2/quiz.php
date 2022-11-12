@@ -1,4 +1,19 @@
 <?php
+// set up basic html
+echo '
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../../nav.js"></script>
+        <link rel="stylesheet" href="../../style.css">
+        <script>
+            // init
+            hrefPrefixes["Lab 5 Home"] = "../../Lab5/";
+            lab6Mode = true;
+        </script>
+    </head>
+    <body>
+';
 
 // init arrays
 $qs = array();
@@ -54,6 +69,14 @@ $qc[2] = "3";
 $qc[3] = "0";
 $qc[4] = "0"; // both are correct
 
+// calculate grade
+$score = 0;
+for ($i = 0; $i < 5; $i++) {
+    if ($qv[$i] == $qc[$i]) {
+        $score++;
+    }
+}
+$grade = ($score / 5) * 100;
 
 // write questions back
 for ($i = 0; $i < 5; $i++) {
@@ -62,4 +85,13 @@ for ($i = 0; $i < 5; $i++) {
     echo "You answered: ".$qa[$i][$qv[$i]]."<br>";
     echo "Correct answer: ".$qa[$i][$qc[$i]]."<br><br>";
 }
+
+// write final grade back
+echo "Your grade is $grade% ($score/5).";
+
+// write end of body
+echo '
+    </body>
+</html>
+';
 ?>
