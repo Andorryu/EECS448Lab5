@@ -1,6 +1,6 @@
 
-// unmodifiable
-const navItems = [
+// modifiable
+let navItems = [
     {
         title: "Lab 5 Home",
         href: "index.html"
