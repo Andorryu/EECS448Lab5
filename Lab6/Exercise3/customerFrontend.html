@@ -10,6 +10,7 @@
             lab6Mode = true;
         </script>
         <script src="formChecker.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <nav></nav>
@@ -17,24 +18,38 @@
         <br>
         <form action="customerBackend.php" method="POST">
             <!-- USERNAME AND PASSWORD -->
-            <h3>Log In</h3>
-            <p>Username (in the form of an email address, ex: name@domain.com):<br>
-                <input type="text" name="username"></p>
-            <p>Password: <br><input type="password" name="password"></p>
-            <br>
+            <section>
+                <h3>Log In</h3>
+                <p>
+                    Username (in the form of an email address, ex: name@domain.com):<br>
+                    <input type="text" name="username">
+                </p>
+                <p>Password: <br><input type="password" name="password"></p>
+                <br>
+            </section>
 
             <!-- ITEMS -->
-            <h3>Items</h3>
-            <p>Vacuum<br><img src="img/vacuum.jpg"><br>Quantity: <input type="text" size="1" name="Vacuum"></p><br>
-            <p>Car<br><img src="img/car.jpg"><br>Quantity: <input type="text" size="1" name="Car"></p><br>
-            <p>Cat?<br><img src="img/cat.jpg"><br>Quantity: <input type="text" size="1" name="Cat?"></p><br>
+            <section>
+                <h3>Items</h3>
+                <div class="item">
+                    <p>Vacuum<br><img src="img/vacuum.jpg"><br>Quantity: <input type="number" min="0" size="1" name="Vacuum"></p>
+                </div>
+                <div class="item">
+                    <p>Car<br><img src="img/car.jpg"><br>Quantity: <input type="number" min="0" size="1" name="Car"></p>
+                </div>
+                <div class="item">
+                    <p>Cat?<br><img src="img/cat.jpg"><br>Quantity: <input type="number" min="0" size="1" name="Cat?"></p>
+                </div>
+            </section>
 
             <!-- SHIPPING OPTIONS -->
-            <h3>Pick a shipping option</h3>
-            <p><input type="radio" name="shipping" value="Free 7 day">Free 7 day</p>
-            <p><input type="radio" name="shipping" value="$50.00 over night">$50.00 over night</p>
-            <p><input type="radio" name="shipping" value="$5.00 three night">$5.00 three night</p>
-            <br>
+            <section>
+                <h3>Pick a shipping option</h3>
+                <p><input type="radio" name="shipping" value="Free 7 day" checked>Free 7 day</p>
+                <p><input type="radio" name="shipping" value="$50.00 over night">$50.00 over night</p>
+                <p><input type="radio" name="shipping" value="$5.00 three night">$5.00 three night</p>
+                <br>
+            </section>
 
             <!-- SUBMIT BUTTON -->
             <button type="submit">Purchase</button>
