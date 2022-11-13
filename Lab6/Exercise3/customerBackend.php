@@ -42,21 +42,21 @@ echo '
         </tr>
         <tr>
             <th>Vacuum</th>
-            <td>insert quantity here</td>
-            <td>insert cost per item here</td>
-            <td>insert sub total here</td>
+            <td>'.$_POST["vacuum"].'</td>
+            <td>$90</td>
+            <td>$'.(90 * $_POST["vacuum"]).'</td>
         </tr>
         <tr>
             <th>Car</th>
-            <td>insert quantity here</td>
-            <td>insert cost per item here</td>
-            <td>insert sub total here</td>
+            <td>'.$_POST["car"].'</td>
+            <td>$800</td>
+            <td>$'.(800 * $_POST["car"]).'</td>
         </tr>
         <tr>
             <th>Cat?</th>
-            <td>insert quantity here</td>
-            <td>insert cost per item here</td>
-            <td>insert sub total here</td>
+            <td>'.$_POST["cat?"].'</td>
+            <td>$60</td>
+            <td>$'.(60 * $_POST["cat?"]).'</td>
         </tr>
         <tr>
             <th>Shipping</th>
