@@ -1,5 +1,4 @@
 <?php
-
 // echo start of file
 echo '
 <!DOCTYPE html>
@@ -18,8 +17,54 @@ echo '
     </head>
     <body>
         <nav></nav>
-        <h1>Here\'s your receipt!</h1>
+        <h1>Welcome! Thanks for your purchase!</h1>
         <br>
+';
+
+// display password
+echo '
+<section>
+    <h3>This is the password you entered</h3>
+    <p>'.$_POST["password"].'</p>
+</section>
+';
+
+// display receipt
+echo '
+<section>
+    <h3>Here\'s your receipt!</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th>Quantity</th>
+            <th>Cost per Item</th>
+            <th>Sub Total</th>
+        </tr>
+        <tr>
+            <th>Vacuum</th>
+            <td>insert quantity here</td>
+            <td>insert cost per item here</td>
+            <td>insert sub total here</td>
+        </tr>
+        <tr>
+            <th>Car</th>
+            <td>insert quantity here</td>
+            <td>insert cost per item here</td>
+            <td>insert sub total here</td>
+        </tr>
+        <tr>
+            <th>Cat?</th>
+            <td>insert quantity here</td>
+            <td>insert cost per item here</td>
+            <td>insert sub total here</td>
+        </tr>
+        <tr>
+            <th>Shipping</th>
+            <td colspan="2">insert shipping type here</td>
+            <td>insert sub total here</td>
+        </tr>
+    </table>
+</section>
 ';
 
 // echo end of file

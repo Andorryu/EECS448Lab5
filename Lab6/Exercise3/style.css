@@ -34,3 +34,19 @@ div.item input {
 .item .error {
     color: lightcoral;
 }
+
+table {
+    background-color: darkblue;
+}
+
+tr {
+    background-color: lightcoral;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
