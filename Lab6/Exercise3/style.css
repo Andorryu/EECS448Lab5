@@ -6,7 +6,6 @@ section {
     background-color:burlywood;
     padding: 20px;
     margin: 20px;
-    text-align: center;
 }
 
 .item { /* img frames */
@@ -38,6 +37,7 @@ div.item input {
 
 table {
     background-color: darkblue;
+    margin: auto;
 }
 
 tr {
