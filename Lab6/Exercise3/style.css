@@ -2,6 +2,10 @@ body {
     text-align: center;
 }
 
+nav {
+    text-align: left;
+}
+
 section {
     background-color:burlywood;
     padding: 20px;
