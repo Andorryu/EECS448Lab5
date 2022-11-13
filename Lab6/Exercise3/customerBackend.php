@@ -60,8 +60,12 @@ echo '
         </tr>
         <tr>
             <th>Shipping</th>
-            <td colspan="2">insert shipping type here</td>
-            <td>insert sub total here</td>
+            <td colspan="2">'.($_POST["shipping"] == '0' ? 'Free 7 day': ($_POST["shipping"] == '50' ? '$50.00 over night' : '$5.00 three night')).'</td>
+            <td>'.$_POST["shipping"].'</td>
+        </tr>
+        <tr>
+            <th colspan="3">Total Cost</th>
+            <th>'.((60 * $_POST["cat?"]) + (800 * $_POST["car"]) + (90 * $_POST["vacuum"]) + $_POST["shipping"]).'</th>
         </tr>
     </table>
 </section>
